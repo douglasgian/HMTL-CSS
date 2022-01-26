@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir ese site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/">
+        <source media="(max-width: 1000px)" srcset="imagens/foto-m.png" type="image/">
+        <img src="imagens/foto-g.png" alt="Foto flexível">
+    </picture>
+
+
+    <h1>Reproduzindo áudios</h1>
+    <audio src="midia/musica.mp3" controls autoplay></audio> <!--MP3 WAV OGG-->
+    <audio preload="metadata" autoplay controls loop>
+        <source src="midia/musica.mp3" type="audio/mpeg">
+        <p>Infelizmente seu navegador não consegue reproduzir áudio <a href="midia/musica.mp3">baixe o áudio</a></p>
+    </audio>
+
+
+    <h1>Reproduzindo vídeos</h1>
+    <video src="midia/video.m4v" width="500" controls poster="imagens/imagem.jpg" loop></video>
+    <video width="500" controls poster="imagens/imagem.jpg">
+        <source srcset="midia/video.m4v" type="video/mp4">
+        <source srcset="midia/video.webm" type="video/webm">
+        <p>Seu navegador não tem compatibilidade com reprodução de vídeos</p>
+    </video>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/5stD-RhwI5A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</body>
+</html>
